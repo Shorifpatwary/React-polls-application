@@ -10,7 +10,7 @@ import {
 	Button,
 } from "reactstrap";
 
-class ParticipationForm extends React.PureComponent {
+class ParticipationForm extends React.Component {
 	state = {
 		name: "",
 		selectedOption: "",

@@ -4,7 +4,7 @@ import ParticipationForm from "./participate-form";
 import PropTypes from "prop-types";
 import PollForm from "../poll-form";
 
-class MainContent extends React.PureComponent {
+class MainContent extends React.Component {
 	state = {
 		openModal: false,
 	};

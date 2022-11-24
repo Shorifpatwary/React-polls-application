@@ -8,7 +8,7 @@ const defaultOptions = [
 	{ id: shortid.generate(), value: "", vote: 0 },
 ];
 
-class PollForm extends React.PureComponent {
+class PollForm extends React.Component {
 	state = {
 		title: "",
 		description: "",
