@@ -10,7 +10,7 @@ import {
 	Button,
 } from "reactstrap";
 
-class ParticipationForm extends React.Component {
+class ParticipationForm extends React.PureComponent {
 	state = {
 		name: "",
 		selectedOption: "",
@@ -74,9 +74,7 @@ class ParticipationForm extends React.Component {
 					<Button
 						type="button"
 						className="ms-2 btn btn-danger"
-						onClick={() =>
-							this.props.deletePoll(this.props.poll.id)
-						}
+						onClick={() => this.props.deletePoll(this.props.poll.id)}
 					>
 						Delete Poll
 					</Button>
@@ -91,11 +89,7 @@ class ParticipationForm extends React.Component {
 								name="selectedOption"
 								value={opt.id}
 								onChange={this.handleChange}
-								invalid={
-									this.state.errors.selectedOption
-										? true
-										: false
-								}
+								invalid={this.state.errors.selectedOption ? true : false}
 							/>
 							<Label className="m-1" for={opt.id}>
 								{opt.value}
@@ -105,10 +99,7 @@ class ParticipationForm extends React.Component {
 							</span>
 							<span className="btn btn-info ms-5 rounded">
 								{this.props.poll.totalVote > 0
-									? (
-											(100 * opt.vote) /
-											this.props.poll.totalVote
-									  ).toFixed(2)
+									? ((100 * opt.vote) / this.props.poll.totalVote).toFixed(2)
 									: 0}
 								%
 							</span>
@@ -141,7 +132,3 @@ ParticipationForm.propTypes = {
 	deletePoll: PropTypes.func.isRequired,
 };
 export default ParticipationForm;
-// errors occured in this file
-// error was in the pollId porperty . in getOpinion method on line no 176
-// I checke this file . 1 error was in 194
-//  and I got an error in the HM Nayems file in 140

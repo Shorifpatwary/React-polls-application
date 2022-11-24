@@ -1,5 +1,5 @@
 import React from "react";
-import PropTpes from "prop-types";
+import PropTypes from "prop-types";
 import { ListGroup, ListGroupItem } from "reactstrap";
 
 const PollList = (props) => {
@@ -27,7 +27,7 @@ const PollList = (props) => {
 };
 // only two porp is passed to this component
 PollList.porpTypes = {
-	polls: PropTpes.array.isRequired,
-	selectPoll: PropTpes.func.isRequired,
+	polls: PropTypes.array.isRequired,
+	selectPoll: PropTypes.func.isRequired,
 };
 export default PollList;

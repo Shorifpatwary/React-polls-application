@@ -4,7 +4,7 @@ import ParticipationForm from "./participate-form";
 import PropTypes from "prop-types";
 import PollForm from "../poll-form";
 
-class MainContent extends React.Component {
+class MainContent extends React.PureComponent {
 	state = {
 		openModal: false,
 	};
@@ -16,16 +16,13 @@ class MainContent extends React.Component {
 		if (Object.keys(poll).length === 0) {
 			return (
 				<div>
-					<h2 className="h2  text-success">
-						Welcome to my application
-					</h2>
+					<h2 className="h2  text-success">Welcome to my application</h2>
 					<p className="lead text-black">
 						Lorem ipsum dolor sit amet consectetur adipisicing elit.
-						Perspiciatis possimus labore blanditiis, magni libero
-						omnis quidem quos error totam natus inventore id quia
-						incidunt esse deleniti? Fuga quisquam deleniti fugiat.
-						Expedita necessitatibus molestias, debitis impedit ad
-						cupiditate ullam dicta soluta?
+						Perspiciatis possimus labore blanditiis, magni libero omnis quidem
+						quos error totam natus inventore id quia incidunt esse deleniti?
+						Fuga quisquam deleniti fugiat. Expedita necessitatibus molestias,
+						debitis impedit ad cupiditate ullam dicta soluta?
 					</p>
 				</div>
 			);
@@ -46,9 +43,7 @@ class MainContent extends React.Component {
 					toggle={this.toggleModal}
 					unmountOnClose={true}
 				>
-					<ModalHeader toggle={this.toggleModal}>
-						Update Your poll
-					</ModalHeader>
+					<ModalHeader toggle={this.toggleModal}>Update Your poll</ModalHeader>
 					<ModalBody>
 						<PollForm
 							poll={poll}

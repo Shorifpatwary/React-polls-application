@@ -8,7 +8,7 @@ import {
 	FormFeedback,
 	Button,
 } from "reactstrap";
-// // thid code is from ////
+
 const MyForm = ({
 	title,
 	description,
@@ -32,9 +32,7 @@ const MyForm = ({
 				onChange={handleChange}
 				invalid={errors.title ? true : false}
 			/>
-			{errors.title ? (
-				<FormFeedback> {errors.title} </FormFeedback>
-			) : null}
+			{errors.title ? <FormFeedback> {errors.title} </FormFeedback> : null}
 		</FormGroup>
 
 		<FormGroup>
@@ -62,11 +60,7 @@ const MyForm = ({
 					<Input
 						value={opt.value}
 						onChange={(e) => handleOptionChange(e, index)}
-						invalid={
-							errors.options && errors.options[index]
-								? true
-								: false
-						}
+						invalid={errors.options && errors.options[index] ? true : false}
 					/>
 					<Button
 						className="btn-danger ms-2"
@@ -97,7 +91,3 @@ MyForm.propTypes = {
 	handleSubmit: PropTypes.func.isRequired,
 };
 export default MyForm;
-//////////////////////////////////////
-//  errors is occured in this page
-// for this file error title and description didn't showing
-// errors is catch . in the title and des input value spelling was mistak it.s take more than 2 hours .
