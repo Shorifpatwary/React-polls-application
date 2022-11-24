@@ -7,7 +7,7 @@ import Sidebar from "./components/sidebar";
 
 import POLLS from "./data/polls";
 
-class App extends React.PureComponent {
+class App extends React.Component {
 	state = {
 		polls: [],
 		selectedPoll: {},
