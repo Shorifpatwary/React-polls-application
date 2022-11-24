@@ -3,17 +3,19 @@ import shortid from "shortid";
 import PropTypes from "prop-types";
 import MyForm from "./form";
 
-
 const defaultOptions = [
 	{ id: shortid.generate(), value: "", vote: 0 },
 	{ id: shortid.generate(), value: "", vote: 0 },
 ];
 
-class PollForm extends React.Component {
+class PollForm extends React.PureComponent {
 	state = {
 		title: "",
 		description: "",
-		options: defaultOptions,
+		options: [
+			{ id: shortid.generate(), value: "", vote: 0 },
+			{ id: shortid.generate(), value: "", vote: 0 },
+		],
 		errors: {},
 	};
 	componentDidMount() {
