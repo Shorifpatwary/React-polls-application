@@ -1,0 +1,3 @@
+I got some error for typing mistak like the before one ( poll_app ) . 
+error 1 . value attribute typing mistake . (vlaue)
+error 2 . handleSubmit > this.porps.getOpinion pollId property ( PollId ) . 
